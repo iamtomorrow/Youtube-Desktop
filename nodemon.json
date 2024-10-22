@@ -1,0 +1,4 @@
+{
+    "watch": ["start", "electron .", "watch"], 
+    "exec": "nodemon --exec electron ."
+}
