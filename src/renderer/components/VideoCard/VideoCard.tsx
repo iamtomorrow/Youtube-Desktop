@@ -1,5 +1,7 @@
+
 import React from "react";
 import { VideoSearchProps } from "../../../types/Videos";
+import "./VideoCard.css";
 
 interface Props {
     title: string 
@@ -8,56 +10,84 @@ interface Props {
 const VideoCard = ({ snippet }: VideoSearchProps) => {
     return (
         <div
-        style={{
-            width: 340,
-            height: 180,
-            borderRadius: 12,
-            marginLeft: 4,
-            marginRight: 4,
-        }}>
+        className="video-card--container">
             <div
             style={{
                 width: "100%",
                 height: "100%",
                 display: "flex",
+                flexDirection: "column",
                 borderRadius: 12,
             }}>
                 <div
-                style={{
-                    width: "100%",
-                    position: 'absolute',
-                    zIndex: -1,
-                    borderRadius: 12,
-                }}>
+                className="video-card-thumbnail--container">
                     <img 
                         src={ snippet.thumbnails.high.url }
-                        style={{
-                            width: 340,
-                            height: 180,
-                            objectFit: "cover",
-                            borderRadius: 12,
-                        }}
+                        className="video-card-thumbnail"
                     />
                 </div>
 
                 <div
                 style={{
-                    zIndex: 1,
                     width: "100%",
-                    height: "100%",
+                    maxHeight: 60,
                     display: "flex",
-                    flexDirection: "column",
+                    flexDirection: "row",
                     alignItems: "center",
                     justifyContent: "center",
-                    background: "linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.8))",
-                    borderRadius: 12,
+                    paddingTop: 10,
                 }}>
-                    <p
+                    <div
                     style={{
-                        fontSize: 10,
-                        fontWeight: "600",
-                        color: "#ffffff"
-                    }}>{ snippet.title }</p>
+                        width: 40,
+                        height: "100%",
+                        // backgroundColor: "violet"
+                    }}>
+                        <div
+                        style={{
+                            width: 34,
+                            height: 34,
+                            borderRadius: 17,
+                            backgroundColor: "rgba(0, 0, 0, 0.1)"
+                        }}>
+
+                        </div>
+                    </div>
+                    <div
+                    style={{
+                        width: "100%",
+                        height: "100%",
+                        display: "flex",
+                        paddingLeft: 10,
+                        flexDirection: "column",
+                        // backgroundColor: "yellow"
+                    }}>
+                        <h2
+                        style={{
+                            fontSize: 12,
+                            fontWeight: "600",
+                            color: "#000000",
+                            textAlign: "left",
+                        }}>{ snippet.title }</h2>
+
+                        <p
+                        style={{
+                            fontSize: 10,
+                            fontWeight: "600",
+                            color: "rgba(0, 0, 0, 0.7)",
+                            textAlign: "left",
+                            marginTop: 4,
+                        }}>{ snippet.channelTitle }</p>
+                        
+                        <p
+                        style={{
+                            fontSize: 8,
+                            fontWeight: "600",
+                            color: "rgba(0, 0, 0, 0.7)",
+                            textAlign: "left",
+                            marginTop: 4,
+                        }}>{ snippet.publishTime }</p>
+                    </div>
                 </div>
             </div>
         </div>

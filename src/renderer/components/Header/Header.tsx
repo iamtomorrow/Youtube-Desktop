@@ -35,37 +35,10 @@ export const Header: React.FC = ( ) => {
                     paddingLeft: 10,
                     paddingRight: 10,
                 }}>
-                    <div
-                    style={{
-                        width: 30,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                    }}>
-                        <RiMenuFill
-                            size={20}
-                            color="#000000"
-                        />
-                    </div>
-                    <div
-                    style={{
-                        height: '100%',
-                        paddingLeft: 20,
-                        paddingRight: 20,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center"
-                    }}>
-                        <img 
-                            src={"https://www.horizont.net/news/media/22/Youtube-Logo-2017-215190.jpeg"}
-                            style={{  
-                                width: 70,
-                            }}
-                        />
-                    </div>
+
                 </div>
 
-                <div
+                {/* <div
                 style={{
                     width: "100%",
                     height: "100%",
@@ -75,7 +48,7 @@ export const Header: React.FC = ( ) => {
                     justifyContent: "center",
                 }}>
                     <SearchBar />
-                </div>
+                </div> */}
 
                 <div
                 style={{
@@ -89,47 +62,22 @@ export const Header: React.FC = ( ) => {
                     paddingLeft: 10,
                     paddingRight: 10,
                 }}>
-                    <button
+                    <div
                     style={{
-                        width: 40,
-                        height: 40,
-                        borderRadius: 20,
-                        marginLeft: 6,
-                        marginRight: 6,
+                        height: '100%',
+                        paddingLeft: 20,
+                        paddingRight: 20,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center"
                     }}>
-                        <RiNotification2Line 
-                            size={20}
-                            color="#000000"
+                        <img 
+                            src={"https://upload.wikimedia.org/wikipedia/commons/3/34/YouTube_logo_%282017%29.png"}
+                            style={{  
+                                width: 90,
+                            }}
                         />
-                    </button>
-
-                    <button
-                    style={{
-                        width: 40,
-                        height: 40,
-                        borderRadius: 20,
-                        marginLeft: 6,
-                        marginRight: 6,
-                    }}>
-                        <RiVideoAddLine
-                            size={20}
-                            color="#000000"
-                        />
-                    </button>
-
-                    <button
-                    style={{
-                        width: 40,
-                        height: 40,
-                        borderRadius: 20,
-                        marginLeft: 6,
-                        marginRight: 6,
-                    }}>
-                        <RiUser3Line
-                            size={20}
-                            color="#000000"
-                        />
-                    </button>
+                    </div>
                 </div>
             </div>
         </div>

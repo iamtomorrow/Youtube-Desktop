@@ -12,10 +12,9 @@ export const SidebarItem = ({ title, icon }: Props) => {
         style={{
             width: "100%",
             height: 46,
-            marginTop: 4,
-            marginBottom: 4,
+            marginTop: 8,
+            marginBottom: 8,
             borderRadius: 8,
-            backgroundColor: "#ffffff"
         }}>
             <button
             style={{
@@ -26,6 +25,7 @@ export const SidebarItem = ({ title, icon }: Props) => {
                 alignItems: "center",
                 padding: 4,
                 borderRadius: 8,
+                background: "none"
             }}>
                 <div
                 style={{

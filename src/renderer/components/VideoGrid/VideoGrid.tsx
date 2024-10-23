@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import VideoCard from "../VideoCard/VideoCard";
 import { API } from "../../../api/api";
 import { useVideosContext } from "../../../contexts/VideosContexts";
+import { Header } from "../Header/Header";
 
 interface Props {
     content: any[]
@@ -18,9 +19,18 @@ export const VideoGrid = ( ) => {
             width: "100%",
             height: "100%",
             display: "flex",
-            flexDirection: "row",
-            flexWrap: "wrap",
+            flexDirection: "column",
         }}>
+            <Header />
+
+            <div
+            style={{
+                width: "100%",
+                height: "100%",
+                display: "flex",
+                flexDirection: "row",
+                flexWrap: "wrap",
+            }}>
             {
                 videos.map((item) => (
                     <VideoCard 
@@ -31,6 +41,7 @@ export const VideoGrid = ( ) => {
                     />
                 ))
             }
+            </div>
         </div>
     )
 }
